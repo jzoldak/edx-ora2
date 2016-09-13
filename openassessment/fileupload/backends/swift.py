@@ -11,7 +11,6 @@ ORA2_SWIFT_KEY should correspond to Meta Temp-Url-Key configure in swift. Run
 'swift stat -v' to get it.
 '''
 
-import boto
 import logging
 from django.conf import settings
 import swiftclient
@@ -26,6 +25,9 @@ from ..exceptions import FileUploadInternalError
 
 
 class Backend(BaseBackend):
+    """
+    Upload openassessment student files to swift
+    """
 
     def get_upload_url(self, key, content_type):
         bucket_name, key_name = self._retrieve_parameters(key)
@@ -53,8 +55,8 @@ class Backend(BaseBackend):
                 method='GET',
                 seconds=self.DOWNLOAD_URL_TIMEOUT)
             download_url = '%s://%s%s' % (url.scheme, url.netloc, temp_url)
-            r = requests.get(download_url)
-            return download_url if r.status_code==200 else ""
+            response = requests.get(download_url)
+            return download_url if response.status_code == 200 else ""
         except Exception as ex:
             logger.exception(
                 u"An internal exception occurred while generating a download URL."
@@ -63,6 +65,11 @@ class Backend(BaseBackend):
 
 
 def get_settings():
+    """
+    Returns the swift key and a parsed url.
+    Both are generated from django settings.
+    """
+
     url = getattr(settings, 'ORA2_SWIFT_URL', None)
     key = getattr(settings, 'ORA2_SWIFT_KEY', None)
     url = urlparse.urlparse(url)
