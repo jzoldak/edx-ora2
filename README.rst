@@ -7,7 +7,7 @@ Open Response Assessment |build-status| |coverage-status|
 Installation, Tests, and other Developer Tasks
 ==============================================
 
-The previous README instructions have fallen woefully out-of-date, edX engineers now follow the guides on our `internal wiki <https://openedx.atlassian.net/wiki/display/TNL/ORA+FAQ>`_.
+EdX engineers now follow the guides on our `internal wiki <https://openedx.atlassian.net/wiki/display/TNL/ORA+FAQ>`_.
 
 License
 =======
@@ -30,11 +30,10 @@ Please do not report security issues in public. Please email security@edx.org
 Mailing List and Slack
 ======================
 
-You can discuss this code on the `edx-code Google Group`. Alternatively, our real-time conversations are on Slack. You can request a `Slack invitation`_, then join our `community Slack team`_.
+You can get help with this code on our `mailing lists`_ or in real-time conversations on `Slack`_.
 
-.. _edx-code Google Group: https://groups.google.com/forum/#!forum/edx-code
-.. _Slack invitation: https://openedx-slack-invite.herokuapp.com/
-.. _community Slack team: http://openedx.slack.com/
+.. _mailing lists: https://open.edx.org/getting-help
+.. _Slack: https://open.edx.org/getting-help
 
 .. |build-status| image:: https://travis-ci.org/edx/edx-ora2.png?branch=master
    :target: https://travis-ci.org/edx/edx-ora2
