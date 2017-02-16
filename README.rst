@@ -7,7 +7,7 @@ Open Response Assessment |build-status| |coverage-status|
 Installation, Tests, and other Developer Tasks
 ==============================================
 
-EdX engineers now follow the guides on our `internal wiki <https://openedx.atlassian.net/wiki/display/TNL/ORA+FAQ>`_.
+EdX engineers now follow the `guides on our wiki <https://openedx.atlassian.net/wiki/display/TNL/ORA+FAQ>`_.
 
 License
 =======
